@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    padding-left: 8%;
+    padding-right: 8%;
+    background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(images/bg.png);
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+p{
+    font-size: 10px;
+    color: #fff;
+    line-height: 20px;  /* satır yüksekliği */
+}
+.btn{
+    padding: 12px 28px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-top: 30px;
+    cursor: pointer;
+    color:black;
+    background-color: #fff;
+    border-radius: 20px;
+    border: 1px solid red;
+    text-decoration: none;
+}
+.btn:hover{
+    background-color: black;
+    color: white;
+    border-color: white;
+}
+
+.navbar{
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    column-gap: 15px;
+}
+nav ul li a{
+    color:#fff;
+    text-decoration: none;
+    transition: ease 0.5s;
+}
+
+nav ul li a:hover{
+    color: black;
+
+}
+.row{
+    display: flex;
+    color: white;
+    column-gap: 10px;
+    height: 88%;
+}
+.col{
+    flex-basis: 50% /*col lar sayfayı yarı yarıya kaplasın diye  */
+}
+h1{
+    color:red;
+    font-size: 100px;
+}
+.desc{
+    font-size: 16px;
+}
+.cards{
+   
+    max-width:500px;
+    margin: auto;
+  
+    
+
+}
+.card{
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 13px 20px;
+    cursor: pointer;  /* fareyi götürdüğümüzde tıklanabiliyor olarak gösteriyor */
+    background-position: center;
+    background-size: cover;  /* resmi tam alsın diye yazıldı */
+    border: 1px solid red;
+    position: relative;  /* bunu yazmazssak kart sınırları belli olmaz ama bunu yazınca .card .card-bottom burda yazdığımız bottom 0 da kartın en altına sıfırlar yoksa sayfanın altına sıfırlar  */
+    margin: 10px 10px;
+}
+.card .card-head{
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    border-radius: 8px;
+    padding: 6px;
+
+}
+.card:hover{
+    transform: translateY(-8px);/* yukarıya doğru gitmesini istiyoruz üstüne gelindiğinde */
+    border-color: #fff;
+
+}
+.card .card-bottom{  /* butonu aşağa atmak için */
+    position: absolute;    /* eksenden çıkıyor */
+    bottom: 25px;  /* bu şekildede butonu alta sıfırlıyor */
+
+}
+.card.card-1{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm5N--5WSkyRceWdeV5Jw2lbaE428MGAWVQQ&s);
+}
+.card.card-2{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9B4X7W1kZZotQLmq1yLHiD9_3e25gp9VKnA&s);
+    
+}
+.card.card-3{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl7mLPf6r9n8xzuNYEfJ3qe61-u5G875D5BA&s);
+}
+.card.card-4{
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTabCJYmvD6_NBqZdnQqy2ugVX6mFo7IjPx-A&ss);
+}
+
+@media (max-width: 800px){   
+    .cards{
+        display: flex;
+       max-width: 50px;
+    }
+
+}
